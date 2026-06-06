@@ -1,0 +1,53 @@
+# Backend - Java/Spring Boot
+backend/target/
+backend/.mvn/wrapper/maven-wrapper.jar
+backend/*.jar
+backend/*.war
+backend/*.ear
+backend/*.class
+backend/.idea/
+backend/*.iml
+backend/.vscode/
+
+# Environment variables - NEVER COMMIT PASSWORDS!
+backend/.env
+backend/src/main/resources/application-local.properties
+backend/src/main/resources/application-prod.properties
+
+# Frontend (when we create it)
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.env
+frontend/.env.local
+
+# IDEs
+.idea/
+*.iml
+*.iws
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Database
+*.db
+*.sqlite
+
+# Keep .env.example files (these are safe templates)
+!backend/.env.example
+!frontend/.env.example
