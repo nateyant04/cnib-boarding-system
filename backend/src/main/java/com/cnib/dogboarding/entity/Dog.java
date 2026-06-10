@@ -39,8 +39,8 @@ public class Dog {
     @Column(name = "medical_info", columnDefinition = "TEXT")
     private String medicalInfo;
 
-    @Column(name = "dietary_restrictions", columnDefinition = "TEXT")
-    private String dietaryRestrictions;
+    @Column(name = "food_type", columnDefinition = "TEXT")
+    private String foodType;
 
     @Column(name = "profile_picture_url")
     private String profilePictureUrl;

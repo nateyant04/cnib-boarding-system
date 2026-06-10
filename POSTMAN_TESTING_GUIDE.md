@@ -80,7 +80,7 @@ Your API is now running at: **http://localhost:8080**
 
 ✅ **Success!** You just created your first user!
 
----
+--- 
 
 ### **Test 2: Get All Users (GET)**
 
