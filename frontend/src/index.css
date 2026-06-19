@@ -334,7 +334,7 @@ h1 {
   }
 
   .hero-image-wrap {
-    min-height: 420px;
+    display: none;
   }
 
   .access-grid {
@@ -367,6 +367,10 @@ h1 {
     width: calc(100% + 2rem);
     margin-left: -1rem;
   }
+  .hero-image-wrap {
+    display: none;
+  }
+
 
   .hero-copy {
     padding: 2.2rem 1.5rem;
