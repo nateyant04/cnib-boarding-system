@@ -41,7 +41,8 @@ public class UserService {
         User user = User.builder()
                 .email(request.getEmail())
                 .passwordHash(passwordEncoder.encode(request.getPassword()))
-                .name(request.getName())
+                .firstName(request.getFirstName())
+                .lastName(request.getLastName())
                 .phone(request.getPhone())
                 .role(request.getRole())
                 .build();
@@ -105,8 +106,9 @@ public class UserService {
             user.setEmail(request.getEmail());
         }
 
-        if (request.getName() != null) {
-            user.setName(request.getName());
+        if (request.getFirstName() != null && request.getLastName() != null) {
+            user.setFirstName(request.getFirstName());
+            user.setLastName(request.getLastName());
         }
 
         if (request.getPhone() != null) {
@@ -134,7 +136,8 @@ public class UserService {
         return UserDTO.builder()
                 .id(user.getId())
                 .email(user.getEmail())
-                .name(user.getName())
+                .firstName(user.getFirstName())
+                .lastName(user.getLastName())
                 .phone(user.getPhone())
                 .role(user.getRole())
                 .createdAt(user.getCreatedAt())

@@ -9,18 +9,21 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
 
 /**
- * Data Transfer Object representing user data returned from the API.
- * Excludes sensitive information such as password for secure data transmission.
+ * DTO for user responses.
+ * Does not include sensitive information like passwords.
  */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class UserDTO {
+
     private Long id;
     private String email;
-    private String name;
+    private String firstName;
+    private String lastName;
     private String phone;
     private UserRole role;
     private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 }

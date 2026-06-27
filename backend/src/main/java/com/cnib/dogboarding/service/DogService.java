@@ -150,7 +150,7 @@ public class DogService {
                 .foodType(dog.getFoodType())
                 .profilePictureUrl(dog.getProfilePictureUrl())
                 .puppyRaiserId(dog.getPuppyRaiser().getId())
-                .puppyRaiserName(dog.getPuppyRaiser().getName())
+                .puppyRaiserName(dog.getPuppyRaiser().getFirstName() + " " + dog.getPuppyRaiser().getLastName())
                 .createdAt(dog.getCreatedAt())
                 .updatedAt(dog.getUpdatedAt())
                 .build();

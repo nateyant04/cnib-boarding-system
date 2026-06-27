@@ -28,7 +28,7 @@ public interface BoarderAvailabilityRepository extends JpaRepository<BoarderAvai
 
     @Query("SELECT ba FROM BoarderAvailability ba " +
            "WHERE ba.startDate <= :endDate AND ba.endDate >= :startDate " +
-           "ORDER BY ba.boarder.name ASC")
+           "ORDER BY ba.boarder.lastName ASC, ba.boarder.firstName ASC")
     List<BoarderAvailability> findAvailableBoardersForDateRange(
         @Param("startDate") LocalDate startDate,
         @Param("endDate") LocalDate endDate

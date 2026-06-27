@@ -1,32 +1,25 @@
 package com.cnib.dogboarding.dto;
 
 import com.cnib.dogboarding.entity.UserRole;
-import jakarta.validation.constraints.Email;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * Request DTO for updating existing users.
- * All fields are optional to allow partial updates.
+ * DTO for login response.
+ * Contains JWT token and user information.
  */
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
-public class UpdateUserRequest {
-
-    @Email(message = "Email must be valid")
+public class LoginResponse {
+    
+    private String token;
+    private Long userId;
     private String email;
-
-    private String password;
-
     private String firstName;
-
     private String lastName;
-
-    private String phone;
-
     private UserRole role;
 }

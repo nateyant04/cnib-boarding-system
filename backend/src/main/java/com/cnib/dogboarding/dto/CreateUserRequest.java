@@ -26,8 +26,11 @@ public class CreateUserRequest {
     @NotBlank(message = "Password is required")
     private String password;
 
-    @NotBlank(message = "Name is required")
-    private String name;
+    @NotBlank(message = "First name is required")
+    private String firstName;
+
+    @NotBlank(message = "Last name is required")
+    private String lastName;
 
     private String phone;
 

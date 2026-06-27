@@ -39,8 +39,11 @@ public class User {
     @Column(nullable = false)
     private UserRole role;
 
-    @Column(nullable = false)
-    private String name;
+    @Column(name = "first_name", nullable = false)
+    private String firstName;
+
+    @Column(name = "last_name", nullable = false)
+    private String lastName;
 
     private String phone;
 
@@ -64,4 +67,13 @@ public class User {
     @OneToMany(mappedBy = "puppyRaiser")
     @Builder.Default
     private List<BoardingRequest> boardingRequests = new ArrayList<>();
+
+    // Convenience method to get password (alias for passwordHash)
+    public String getPassword() {
+        return passwordHash;
+    }
+    
+    public void setPassword(String password) {
+        this.passwordHash = password;
+    }
 }
