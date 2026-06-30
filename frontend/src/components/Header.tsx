@@ -1,15 +1,39 @@
 import { Link } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 
 export const Header = () => {
+  const { isAuthenticated, user, logout } = useAuth();
+
+  const handleLogout = () => {
+    logout();
+    window.location.href = '/';
+  };
+
   return (
     <>
       <a className="skip-link" href="#main">Skip to main content</a>
       <header className="site-header">
-        <div className="brand" aria-label="CNIB Dog Boarding">
+        <Link to="/" className="brand" aria-label="CNIB Dog Boarding">
           <div className="logo-mark" aria-hidden="true">CNIB</div>
           <span className="brand-text">Dog Boarding</span>
-        </div>
-        <Link className="login-top" to="/login">Log in</Link>
+        </Link>
+        
+        {isAuthenticated ? (
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+            <span style={{ color: 'var(--muted)' }}>
+              {user?.firstName} {user?.lastName}
+            </span>
+            <button 
+              onClick={handleLogout}
+              className="login-top"
+              style={{ cursor: 'pointer', border: 'none' }}
+            >
+              Log out
+            </button>
+          </div>
+        ) : (
+          <Link className="login-top" to="/login">Log in</Link>
+        )}
       </header>
     </>
   );
