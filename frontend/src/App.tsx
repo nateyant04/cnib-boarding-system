@@ -5,6 +5,7 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Homepage } from './pages/Homepage';
 import { Login } from './pages/Login';
+import { Profile } from './pages/Profile';
 
 function App() {
   return (
@@ -42,7 +43,7 @@ function App() {
             path="/profile" 
             element={
               <ProtectedRoute>
-                <div>Profile (Coming Soon)</div>
+                <Profile />
               </ProtectedRoute>
             } 
           />
