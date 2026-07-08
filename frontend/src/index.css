@@ -15,14 +15,32 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
+  height: 100%;
   margin: 0;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--text);
   background:
     radial-gradient(circle at top left, rgba(255, 234, 0, 0.18), transparent 28rem),
     var(--surface);
   line-height: 1.5;
+}
+
+main {
+  flex: 1;
+}
+
+.site-footer {
+  margin-top: auto;
 }
 
 a {

@@ -23,7 +23,12 @@ export const Header = () => {
             <span style={{ color: 'var(--muted)' }}>
               {user?.firstName} {user?.lastName}
             </span>
-            <button 
+            {user?.role === 'BOARDER' && (
+              <Link to="/my-availability" style={{ color: 'var(--muted)', textDecoration: 'none', fontSize: '0.95rem' }}>
+                My Availability
+              </Link>
+            )}
+            <button
               onClick={handleLogout}
               className="login-top"
               style={{ cursor: 'pointer', border: 'none' }}

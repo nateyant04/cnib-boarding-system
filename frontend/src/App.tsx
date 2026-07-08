@@ -6,6 +6,7 @@ import { Footer } from './components/Footer';
 import { Homepage } from './pages/Homepage';
 import { Login } from './pages/Login';
 import { Profile } from './pages/Profile';
+import { AvailabilityPage } from './pages/Availability';
 
 function App() {
   return (
@@ -15,8 +16,16 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/login" element={<Login />} />
-          <Route 
-            path="/boarding-requests" 
+          <Route
+            path="/my-availability"
+            element={
+              <ProtectedRoute>
+                <AvailabilityPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/boarding-requests"
             element={
               <ProtectedRoute>
                 <div>Boarding Requests (Coming Soon)</div>

@@ -1,6 +1,7 @@
 import { useState, useEffect, FormEvent } from 'react';
 import { useAuth } from '../context/AuthContext';
-import { userService, UserProfile } from '../api/userService';
+import { userService } from '../api/userService';
+import type { UserProfile } from '../types/user';
 
 export const Profile = () => {
   const { user } = useAuth();
