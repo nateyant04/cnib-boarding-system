@@ -28,6 +28,11 @@ export const Header = () => {
                 My Availability
               </Link>
             )}
+            {user?.role === 'COORDINATOR' && (
+              <Link to="/add-dog" style={{ color: 'var(--muted)', textDecoration: 'none', fontSize: '0.95rem' }}>
+                Add Dog
+              </Link>
+            )}
             <button
               onClick={handleLogout}
               className="login-top"

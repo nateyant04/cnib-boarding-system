@@ -1,4 +1,4 @@
-import api from './axios';
+import { api } from './axios';
 import type { Availability, CreateAvailabilityRequest, UpdateAvailabilityRequest } from '../types/availability';
 
 export const availabilityService = {

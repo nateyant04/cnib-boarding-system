@@ -15,5 +15,10 @@ export const userService = {
   updateProfile: async (id: number, data: UpdateProfileRequest): Promise<UserProfile> => {
     const response = await api.put<UserProfile>(`/users/${id}`, data);
     return response.data;
-  }
+  },
+
+  getUsersByRole: async (role: string): Promise<UserProfile[]> => {
+    const response = await api.get<UserProfile[]>(`/users/role/${role}`);
+    return response.data;
+  },
 };

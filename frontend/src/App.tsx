@@ -7,6 +7,7 @@ import { Homepage } from './pages/Homepage';
 import { Login } from './pages/Login';
 import { Profile } from './pages/Profile';
 import { AvailabilityPage } from './pages/Availability';
+import { AddDog } from './pages/AddDog';
 
 function App() {
   return (
@@ -21,6 +22,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <AvailabilityPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/add-dog"
+            element={
+              <ProtectedRoute>
+                <AddDog />
               </ProtectedRoute>
             }
           />
